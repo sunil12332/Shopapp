@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Management App</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .nav-bar {
+            background-color: #003366;
+            color: #f5f5f5;
+        }
+        .btn-add {
+            background-color: #ff6f61;
+            color: #f5f5f5;
+        }
+        .btn-add:hover {
+            background-color: #ff9e94;
+        }
+        .btn-edit {
+            background-color: #003366;
+            color: #f5f5f5;
+        }
+        .btn-edit:hover {
+            background-color: #005799;
+        }
+        .btn-delete {
+            background-color: #ff6f61;
+            color: #f5f5f5;
+        }
+        .btn-delete:hover {
+            background-color: #ff9e94;
+        }
+        .table-header {
+            background-color: #003366;
+            color: #f5f5f5;
+        }
+        .table-row:hover {
+            background-color: #f3e9e0;
+        }
+        .customer-details {
+            background-color: #f3e9e0;
+            border: 1px solid #003366;
+            color: #003366;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <nav class="nav-bar py-4">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center">
+                <div>
+                    <a href="#" class="text-2xl font-bold">Customer Management</a>
+                </div>
+                <div>
+                    <a href="#" class="mr-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 18v2a1 1 0 001 1h16a1 1 0 001-1v-2m-9-3v-9l-5 5 5 5zm5 0h6v-6h-6v6z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mx-auto flex justify-center mt-10">
+        <div class="w-1/2 p-5 bg-white rounded-lg shadow-md" style="height: 80vh;">
+            <h2 class="text-2xl font-bold mb-4">Customers List</h2>
+            <table id="customers" class="mb-4 w-full"></table>
+            <button onclick="addCustomer()" class="btn-add px-4 py-2 rounded-md">Add Customer</button>
+        </div>
+        <div class="w-1/2 p-5 bg-white rounded-lg shadow-md ml-5" style="height: 80vh;">
+            <h2 class="text-2xl font-bold mb-4">Customer Details</h2>
+            <div id="details" class="customer-details"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
